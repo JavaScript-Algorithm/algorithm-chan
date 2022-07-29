@@ -15,4 +15,4 @@ function solution(records) {
         if (type === 'Leave') ans.push(`${uid_name[uid]}님이 나갔습니다.`)
     })
     return ans;
-}
+} 
