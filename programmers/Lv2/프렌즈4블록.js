@@ -19,8 +19,7 @@ function solution(m, n, board) {
             }
         }
         
-        if (positions.length > 0) return true;
-        return false;
+        return positions.length > 0;
     }
     
     while (true) {
