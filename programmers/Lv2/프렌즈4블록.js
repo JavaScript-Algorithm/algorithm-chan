@@ -1,5 +1,4 @@
 function solution(m, n, board) {
-    // 모든 점들에 대해 오른쪽, 아래 탐색 후 둘 다 길이가 2 이상이면 삭제하고 ans count 한다.
     board = board.map(e => e.split(''));
     
     const checkSquare = (positions) => {
