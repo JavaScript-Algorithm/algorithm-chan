@@ -1,9 +1,7 @@
 function solution(arr) {
     let [zero, one] = [0, 0];
     
-    const quadTree = (point, len) => {
-        const [x, y] = point;
-        
+    const quadTree = (x, y, len) => {
         if (len === 1) {
             arr[x][y] === 0 ? zero++ : one++;
             return;
@@ -29,13 +27,13 @@ function solution(arr) {
             return;
         }
         
-        quadTree([x, y], halfLen);
-        quadTree([xMid, y], halfLen);
-        quadTree([x, yMid], halfLen);
-        quadTree([xMid, yMid], halfLen);
+        quadTree(x, y, halfLen);
+        quadTree(xMid, y, halfLen);
+        quadTree(x, yMid, halfLen);
+        quadTree(xMid, yMid, halfLen);
     }
     
-    quadTree([0, 0], arr.length);
+    quadTree(0, 0, arr.length);
     
     return [zero, one]
 }
