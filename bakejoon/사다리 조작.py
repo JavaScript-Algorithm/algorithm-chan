@@ -34,8 +34,7 @@ def solution():
             
             # newRoute 반영
             for a, b in newRoute:
-                grid[a][b][1] = 1
-                grid[a][b+1][0] = 1
+                grid[a][b][1] = grid[a][b+1][0] = 1
             
             # 게임 시작
             flag = True
@@ -48,8 +47,7 @@ def solution():
             
             # newRoute 해제
             for a, b in newRoute:
-                grid[a][b][1] = 0
-                grid[a][b+1][0] = 0
+                grid[a][b][1] = grid[a][b+1][0] = 0
     return -1
 
 print(solution())
